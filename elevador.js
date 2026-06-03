@@ -1,8 +1,7 @@
-// Configurações e Regras do Desafio da ETEC
-const TEMPO_POR_ANDAR = 3; // 3 segundos por andar [cite: 27]
-const TEMPO_PORTA = 5;      // 5 segundos para abrir/fechar [cite: 28]
+const TEMPO_POR_ANDAR = 3; // 3 segundos por andar
+const TEMPO_PORTA = 5;      // 5 segundos para abrir/fechar
 
-// Lista de chamadas oficial do PDF: [(origem, destino)] [cite: 45]
+// Lista de chamadas (origem, destino)
 const chamadasOriginais = [
     { origem: 0, destino: 4 },
     { origem: 2, destino: 1 },
@@ -11,10 +10,10 @@ const chamadasOriginais = [
 ];
 
 /**
- * ESTRATÉGIA A: Atender por ordem de chegada (FIFO)
+ * ESTRATÉGIA A: Atender por ordem de chegada
  */
 function estrategiaOrdemDeChegada(chamadas) {
-    let andarAtual = 0; // O elevador começa no andar 0 [cite: 24]
+    let andarAtual = 0; // O elevador começa no andar 0
     let deslocamentoTotal = 0;
     let tempoPortas = 0;
     let ordemAtendimento = [];
@@ -47,10 +46,10 @@ function estrategiaOrdemDeChegada(chamadas) {
 }
 
 /**
- * ESTRATÉGIA B: Atender o mais próximo primeiro (SSTF)
+ * ESTRATÉGIA B: Atender o mais próximo primeiro
  */
 function estrategiaMaisProximo(chamadas) {
-    let andarAtual = 0; // Começa no andar 0 [cite: 24]
+    let andarAtual = 0; // Começa no andar 0
     let deslocamentoTotal = 0;
     let tempoPortas = 0;
     let ordemAtendimento = [];
